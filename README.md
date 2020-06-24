@@ -1,1 +1,0 @@
-# sd-0x-recipes-app-n-tests
