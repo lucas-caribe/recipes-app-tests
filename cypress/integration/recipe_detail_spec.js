@@ -292,7 +292,9 @@ describe('Caso a receita tenha sido iniciada mas não finalizada, o texto do bot
     cy.visit('http://localhost:3000/comidas/52771', {
       onBeforeLoad(win) {
         const inProgressRecipes = {
-          52771: []
+          meals: {
+            52771: [],
+          },
         };
         localStorage.setItem('inProgressRecipes', JSON.stringify(inProgressRecipes));
         win.fetch = fetchMock;
@@ -306,7 +308,9 @@ describe('Caso a receita tenha sido iniciada mas não finalizada, o texto do bot
     cy.visit('http://localhost:3000/bebidas/178319', {
       onBeforeLoad(win) {
         const inProgressRecipes = {
-          178319: []
+          cocktails: {
+            178319: [],
+          },
         };
         localStorage.setItem('inProgressRecipes', JSON.stringify(inProgressRecipes));
         win.fetch = fetchMock;
