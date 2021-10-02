@@ -34,8 +34,7 @@ describe('10 - Implemente um ícone para a tela de perfil, um título e um ícon
   };
 
   it('Não tem header na tela de login', () => {
-    console.log('teste');
-    cy.visit('http://localhost:3000/');
+    cy.visit('http://localhost:3000/').debug();
 
     hasNoHeader();
   });
