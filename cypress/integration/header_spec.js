@@ -18,7 +18,6 @@ describe('10 - Implemente um ícone para a tela de perfil, um título e um ícon
   };
 
   const hasHeader = (title, withSearchButton = true) => {
-    console.log(cy.get('[data-testid="profile-top-btn"]'));
     cy.get('[data-testid="profile-top-btn"]')
       .should('have.attr', 'src')
       .should('include', 'profileIcon');
@@ -35,6 +34,7 @@ describe('10 - Implemente um ícone para a tela de perfil, um título e um ícon
   };
 
   it('Não tem header na tela de login', () => {
+    console.log('teste');
     cy.visit('http://localhost:3000/');
 
     hasNoHeader();
